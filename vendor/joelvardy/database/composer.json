@@ -1,0 +1,24 @@
+{
+	"name": "joelvardy/database",
+	"type": "library",
+	"description": "Database connection library.",
+	"keywords": ["database","sql","mysql","mysqli"],
+	"homepage": "https://github.com/joelvardy/database",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Joel Vardy",
+			"email": "info@joelvardy.com",
+			"homepage": "https://joelvardy.com",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": ">=5.0.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Joelvardy": "src"
+		}
+	}
+}

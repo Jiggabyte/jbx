@@ -1,0 +1,27 @@
+{
+	"name": "joelvardy/authentication",
+	"type": "library",
+	"description": "Authentication library with permission based access.",
+	"keywords": ["auth","authentication","acl","user","permissions"],
+	"homepage": "https://github.com/joelvardy/authentication",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Joel Vardy",
+			"email": "info@joelvardy.com",
+			"homepage": "https://joelvardy.com",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": ">=5.0.0",
+		"joelvardy/config": "dev-master",
+		"joelvardy/cache": "dev-master",
+		"joelvardy/database": "dev-master"
+	},
+	"autoload": {
+		"psr-4": {
+			"Joelvardy": "src"
+		}
+	}
+}

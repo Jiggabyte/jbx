@@ -1,0 +1,24 @@
+{
+	"name": "joelvardy/config",
+	"type": "library",
+	"description": "Application configuration library.",
+	"keywords": ["config","configuration"],
+	"homepage": "https://github.com/joelvardy/config",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Joel Vardy",
+			"email": "info@joelvardy.com",
+			"homepage": "https://joelvardy.com",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": ">=5.0.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Joelvardy": "src"
+		}
+	}
+}
