@@ -8,14 +8,20 @@
 namespace App;
 session_start();
 
-$_SESSION['jbx'] = 'fr54646ge%YRFVR$%%$FE';
+$_SESSION['jbx'] = 'Secret_Key';
 
 require_once 'vendor/autoload.php';
 
 require_once 'libraries/functions.php';
 
 require_once 'libraries/Layout.php';
+
+require_once 'models/Model.php';
+
+require_once 'middlewares/Middleware.php';
+
 require_once 'controllers/Controller.php';
+
 require_once 'router/Router.php';
 
 require_once 'router/requests.php';

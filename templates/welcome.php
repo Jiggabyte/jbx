@@ -43,21 +43,3 @@
 </div>
 </body>
 </html>
-
-<?php
-
-$uri = $_SERVER['REQUEST_URI'];
-
-//$route_string = $route;
-
-$route = '/';
-
-$ruto = str_replace('/','',$route);
-
-$road = '#^'.$route.'.#';
-
-$re = preg_match($road,$uri,$match);
-
-echo $re;
-
-echo $road;

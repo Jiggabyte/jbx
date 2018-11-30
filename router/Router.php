@@ -20,8 +20,13 @@ class Router{
 
 		$route_string = $route;
 
-		$road = '#^'.$route.'?.#i';
-		$roadx = '#^'.$route.'.#i';
+		$roda = '`^/\w{1,}?`';
+
+		if($route == '/' and preg_match($roda,$uri,$match)){
+			$route = 'xxx';
+		}
+
+		$road = '`^'.$route.'?`';
 
 		if($uri == $route_string or preg_match($road,$uri,$match)){
 

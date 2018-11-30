@@ -8,7 +8,7 @@
 
 
 if(isset($_GET['home'])){
-$dane = 'Jiggabyte';
+$parameter = 'Jiggabyte';
 }
 
 

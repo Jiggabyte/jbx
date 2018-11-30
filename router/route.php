@@ -12,6 +12,17 @@ use Controllers\Controller;
 $router = new Router();
 
 $controller = new Controller();
+
+$rote = false;
+
+
+
+
+function jigga(){
+	$controllar = new Controller();
+	return $controllar->jigga();
+}
+
 function home(){
 	$controllar = new Controller();
 	return $controllar->home();
@@ -23,13 +34,23 @@ function contact(){
 	return $controllar->contact();
 }
 
-$rote = false;
+
+
+$router->query('/jigga',$controller,'jigga');
 
 $router->query('/',$controller,'home');
 
 $router->query('/contact',$controller,'contact');
 
-$routes = array('/','/contact');
+$routes = array('/','/contact','/jigga');
+
+
+
+
+
+
+
+
 
 $uri = $_SERVER['REQUEST_URI'];
 
@@ -39,7 +60,6 @@ if(in_array($uri,$routes) or $rote){
 
 } else {
 
-	require_once 'models/error.php';
 	require_once 'templates/error.php';
 	require_once 'templates/welcome.php';
 }

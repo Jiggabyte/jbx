@@ -282,9 +282,9 @@ $_GET['art'] = '';
 							<div class="col-md-7 title">
 
 								<?php
-                                global $dane;
+								global $parameter;
 
-                                alerter($dane,'100px','200px');
+                                alerter($parameter,'30px','200px');
 
 								$nim = "";
 								$data = Article::getList();

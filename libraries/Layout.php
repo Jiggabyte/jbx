@@ -10,16 +10,18 @@ namespace Libraries;
 
 trait Layout {
 
-	public function view($view){
+	public function view($view,$variable = null){
 
-		function render($view)
+		function render($view,$variable = null)
 		{
-			require_once 'models/' . $view;
-			require_once 'templates/views/' . $view;
+			global $parameter;
+			$parameter = $variable;
+			require_once 'templates/views/'.$view;
 			require_once 'templates/template.php';
+
 		}
 
-		return render($view);
+		return render($view,$variable);
 	}
 
 
