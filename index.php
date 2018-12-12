@@ -27,5 +27,3 @@ require_once 'router/Router.php';
 require_once 'router/requests.php';
 
 require_once 'router/route.php';
-
-
