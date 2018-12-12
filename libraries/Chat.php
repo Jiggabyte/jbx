@@ -6,6 +6,11 @@
  * Time: 13:04
  */
 
+if(!isset($_SESSION['jbx'])){
+
+	exit();
+}
+
 class Chat {
 
 

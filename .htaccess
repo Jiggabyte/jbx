@@ -1,0 +1,4 @@
+# Forward every requests to index.php.
+# Forward http to https if available.
+
+

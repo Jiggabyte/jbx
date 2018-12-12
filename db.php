@@ -4,6 +4,12 @@
 //$userN = '';
 //$passN = '';
 
+if(!isset($_SESSION['jbx'])){
+
+	exit();
+}
+
+
 $host = 'localhost';
 $db = 'creditsh';
 $userN = 'root';

@@ -2,6 +2,11 @@
 
 require_once "db.php";
 
+if(!isset($_SESSION['jbx'])){
+
+	exit();
+}
+
 ?>
 
 

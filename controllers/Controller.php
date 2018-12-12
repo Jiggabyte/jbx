@@ -11,8 +11,23 @@ use Libraries;
 use Models\Model;
 use Middleware\Middleware;
 
+
+if(!isset($_SESSION['jbx'])){
+
+	exit();
+}
+
+
 class Controller {
 	use Libraries\Layout;
+	/***  Start:- index.php redirect to '/'           ***/
+	public function _index(){
+
+		return $this->lay_index();
+	}
+	/***  End:- index.php redirect to '/'           ***/
+
+
 
 	public function jigga(){
 

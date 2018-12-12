@@ -1,3 +1,11 @@
+<?php
+
+if(!isset($_SESSION['jbx'])){
+
+	exit();
+}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>

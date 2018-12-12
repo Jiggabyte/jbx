@@ -1,5 +1,12 @@
 <?php
 
+
+if(!isset($_SESSION['jbx'])){
+
+	exit();
+}
+
+
 //check if request was made with the right data
 if(!$_SERVER['REQUEST_METHOD'] == 'POST' || !isset($_POST['reference'])){
 	die("Transaction reference not found");

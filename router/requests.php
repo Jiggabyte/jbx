@@ -7,6 +7,11 @@
  */
 
 
+if(!isset($_SESSION['jbx'])){
+
+	exit();
+}
+
 if(isset($_GET['home'])){
 $parameter = 'Jiggabyte';
 }

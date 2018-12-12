@@ -5,6 +5,14 @@
  * Date: 11/27/18
  * Time: 3:18 PM
  */
+
+
+if(!isset($_SESSION['jbx'])){
+
+	exit();
+}
+
+
 require_once "templates/articler/config.php";
 require_once "templates/articler/classes/Article.php";
 

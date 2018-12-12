@@ -1,3 +1,12 @@
+<?php
+
+
+if(!isset($_SESSION['jbx'])){
+
+	exit();
+}
+
+?>
 <div class="main-menu">
 	<div class="">
 		<div class="col-md-7 nav">

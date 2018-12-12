@@ -1,3 +1,12 @@
+<?php
+
+
+if(!isset($_SESSION['jbx'])){
+
+	exit();
+}
+
+?>
 <footer class="footer animated a_fu fadeInUp" id="footer" style="opacity: 1;">
                 <div class="footer_btm">
                     <div class="container">

@@ -16,6 +16,19 @@ $controller = new Controller();
 $rote = false;
 
 
+if(!isset($_SESSION['jbx'])){
+
+	exit();
+}
+
+/***  Start:- index.php redirect to '/'           ***/
+function _index(){
+	$controllar = new Controller();
+	return $controllar->_index();
+}
+$router->query('/index.php',$controller,'_index');
+/***  End:- index.php redirect to '/'           ***/
+
 
 
 function jigga(){

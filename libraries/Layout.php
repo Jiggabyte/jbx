@@ -24,5 +24,25 @@ trait Layout {
 		return render($view,$variable);
 	}
 
+	public function lay_index(){
+
+		function _render() {
+
+			$urix = $_SERVER['REQUEST_URI'];
+
+			$rodax = '`^/\w{1,}\.php`';
+
+			if(preg_match($rodax,$urix,$matchx)){
+				header('Location:/');
+			}
+
+
+
+
+		}
+
+		return _render();
+	}
+
 
 }
