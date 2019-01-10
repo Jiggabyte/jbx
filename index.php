@@ -17,7 +17,6 @@ use App\Bootstrap;
 
 require_once 'core.php';
 
-
 /*
 |--------------------------------------------------------------------------
 | Starting The Application.
