@@ -1,29 +1,31 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: jigga
- * Date: 11/26/18
- * Time: 5:09 PM
+ * JB X - A lightweight PHP MVC Boilerplate
+ *
+ * @package  JB X
+ * @author   Sixtus Onumajuru <jigga.e10@gmail.com>
  */
-namespace App;
-session_start();
 
-$_SESSION['jbx'] = 'Secret_Key';
+/*
+|--------------------------------------------------------------------------
+| Loading The Base Structure.
+|--------------------------------------------------------------------------
+|The classes are autoloaded with regards to their namespaces.
+|
+*/
+use App\Bootstrap;
 
-require_once 'vendor/autoload.php';
+require_once 'core.php';
 
-require_once 'libraries/functions.php';
 
-require_once 'libraries/Layout.php';
+/*
+|--------------------------------------------------------------------------
+| Starting The Application.
+|--------------------------------------------------------------------------
+|
+*/
+$app = new Bootstrap();
 
-require_once 'models/Model.php';
+$app->run();
 
-require_once 'middlewares/Middleware.php';
 
-require_once 'controllers/Controller.php';
-
-require_once 'router/Router.php';
-
-require_once 'router/requests.php';
-
-require_once 'router/route.php';

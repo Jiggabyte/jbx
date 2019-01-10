@@ -1,4 +1,8 @@
 # Forward every requests to index.php.
 # Forward http to https if available.
 
+#RewriteEngine on
+
+#RewriteRule ^(.*)/$ /$1 [L,R=301]
+
 

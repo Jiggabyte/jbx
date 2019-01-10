@@ -1,8 +1,10 @@
 <?php
-//$host = '';
-//$db = '';
-//$userN = '';
-//$passN = '';
+/**
+ * JB X - A lightweight PHP MVC Boilerplate
+ *
+ * @package  JB X
+ * @author   Sixtus Onumajuru <jigga.e10@gmail.com>
+ */
 
 if(!isset($_SESSION['jbx'])){
 
@@ -10,10 +12,10 @@ if(!isset($_SESSION['jbx'])){
 }
 
 
-$host = 'localhost';
-$db = 'creditsh';
-$userN = 'root';
-$passN = 'wulfclan';
+$host = '';
+$db = '';
+$userN = '';
+$passN = '';
 
 $link = mysqli_connect($host,$userN,$passN,$db);
 

@@ -1,4 +1,10 @@
 <?php
+/**
+ * JB X - A lightweight PHP MVC Boilerplate
+ *
+ * @package  JB X
+ * @author   Sixtus Onumajuru <jigga.e10@gmail.com>
+ */
 
 require_once "db.php";
 
@@ -14,36 +20,12 @@ if(!isset($_SESSION['jbx'])){
 <?php include_once 'inc/header.php'; ?>
 <!--  /header -->
 
-<!--  body -->
-<section class="">
-	<?php sector_one(); ?>
-</section>
-			<!--============================= PRESS MENTIONING =============================-->
-			<section class="press showdt">
-				<?php sector_two(); ?>
-			</section>
 
-<section class="">
-	<?php sector_three(); ?>
-</section>
-				<!-- 02. /Screenshots_area -->
-				<!-- 07. service_area -->
-
-<section class="press">
-<?php sector_four(); ?>
-</section>
-
-
-				<!--============================= PRESS MENTIONING =============================-->
-				<section class="press showmb">
-					<?php sector_five(); ?>
-				</section>
-
-<section class="">
-    <?php sector_six(); ?>
-</section>
-
-<!--  body -->
+<div class="container">
+    <div class="content">
+		<?php sector_one() ?>
+    </div>
+</div>
 
 
 <!-- 13. footer -->

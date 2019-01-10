@@ -1,10 +1,11 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: jigga
- * Date: 11/27/18
- * Time: 1:32 PM
+ * JB X - A lightweight PHP MVC Boilerplate
+ *
+ * @package  JB X
+ * @author   Sixtus Onumajuru <jigga.e10@gmail.com>
  */
+
 
 namespace Libraries;
 

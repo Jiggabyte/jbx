@@ -1,20 +1,31 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: jigga
- * Date: 11/28/18
- * Time: 3:02 PM
+ * JB X - A lightweight PHP MVC Boilerplate
+ *
+ * @package  JB X
+ * @author   Sixtus Onumajuru <jigga.e10@gmail.com>
  */
 
 namespace Router;
-//require_once 'controllers/Controller.php';
 
 use Controllers\Controller;
 
 class Router{
 
 
-	public function query($route, object $action, callable $task){
+	public static $route_arr = [];
+
+
+	public static function query($route, $task){
+
+		$controller = new Controller();
+
+
+			if(in_array($route,Router::$route_arr)){
+
+			} else {
+				array_push(Router::$route_arr,$route);
+			}
 
 		$uri = $_SERVER['REQUEST_URI'];
 
@@ -28,11 +39,29 @@ class Router{
 
 		$road = '`^'.$route.'?`';
 
+		$roda = '`/$`';
+
+		$contas = substr_count($uri,'/');
+
+		if($contas > 1){
+			header('Location:/');
+		}
+
+		if(preg_match($roda,$uri,$match)){
+			if(substr($uri, -1) == '/') {
+				$uri = substr($uri, 0, -1);
+				header('Location:'.$uri);
+			}
+
+		}
+		
+
 		if($uri == $route_string or preg_match($road,$uri,$match)){
 
 			$GLOBALS['rote'] = true;
 
-			return $action->$task();
+			call_user_func( array( $controller, $task ) );
+
 
 		}
 
@@ -41,5 +70,11 @@ class Router{
 
 
 
-}
+	public static function list(){
 
+		return Router::$route_arr;
+
+	}
+
+
+}

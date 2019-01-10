@@ -1,4 +1,4 @@
-# Package name:- JiggaByte X
+# Package name:- JBX
 
  **Language:- PHP**
 
