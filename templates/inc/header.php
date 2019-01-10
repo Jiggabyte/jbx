@@ -16,7 +16,7 @@ if(!isset($_SESSION['jbx'])){
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JiggaByte X</title>
+    <title>JBX</title>
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
