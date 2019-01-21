@@ -12,7 +12,6 @@ use Controllers\Controller;
 
 class Router{
 
-
 	public static $route_arr = [];
 
 
