@@ -21,47 +21,33 @@ class Router{
 		$controller = new Controller();
 
 
-			if(in_array($route,Router::$route_arr)){
+		if(in_array($route,Router::$route_arr)){
 
-			} else {
-				array_push(Router::$route_arr,$route);
-			}
+		} else {
+			array_push(Router::$route_arr,$route);
+		}
+
+		$ury = $_SERVER['REQUEST_URI'];
 
 		$uri = $_SERVER['REQUEST_URI'];
 
-		$route_string = $route;
-
-		$roda = '`^/\w{1,}?`';
+		$roda = '`^/\w{1,}`';
 
 		if($route == '/' and preg_match($roda,$uri,$match)){
-			$route = 'xxx';
+			$route = '/No_Path';
 		}
 
-		$road = '`^'.$route.'?`';
-
-		$roda = '`/$`';
-
-		$contas = substr_count($uri,'/');
-
-		if($contas > 1){
-			header('Location:/');
+		if(substr($ury, -1) == '/') {
+			$ury = substr($ury, 0, -1);
+			header('Location:'.$ury);
 		}
 
-		if(preg_match($roda,$uri,$match)){
-			if(substr($uri, -1) == '/') {
-				$uri = substr($uri, 0, -1);
-				header('Location:'.$uri);
-			}
+		$rodi = '`^'.$route.'\?jb=x`';
 
-		}
-		
-
-		if($uri == $route_string or preg_match($road,$uri,$match)){
+		if($uri == $route or preg_match($rodi,$uri,$match)){
 
 			$GLOBALS['rote'] = true;
-
-			call_user_func( array( $controller, $task ) );
-
+			call_user_func(array($controller, $task));
 
 		}
 
