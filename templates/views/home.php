@@ -20,4 +20,6 @@ if(!isset($_SESSION['jbx'])){
 
     <div class="title">JiggaByte X</div>
 
+    <?php global $rote; echo $rote; ?>
+
 <?php } ?>

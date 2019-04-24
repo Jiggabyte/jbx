@@ -26,14 +26,14 @@ class Router{
 			array_push(Router::$route_arr,$route);
 		}
 
-		$ury = $_SERVER['REQUEST_URI'];
-
 		$uri = $_SERVER['REQUEST_URI'];
+        $ury = $_SERVER['REQUEST_URI'];
 
 		$roda = '`^/\w{1,}`';
 
 		if($route == '/' and preg_match($roda,$uri,$match)){
-			$route = '/No_Path';
+			$route = '';
+
 		}
 
 		if(substr($ury, -1) == '/') {
@@ -43,9 +43,9 @@ class Router{
 
 		$rodi = '`^'.$route.'\?jb=x`';
 
-		if($uri == $route or preg_match($rodi,$uri,$match)){
+		if($uri === $route or preg_match($rodi,$uri,$match)){
 
-			$GLOBALS['rote'] = true;
+			$_SESSION['rote'] = true;
 			call_user_func(array($controller, $task));
 
 		}

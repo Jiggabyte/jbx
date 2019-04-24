@@ -12,11 +12,13 @@ if(!isset($_SESSION['jbx'])){
 	exit();
 }
 
+
 ?>
 
 
 <?php function sector_one() { ?>
     <div class="title">Not Found!</div>
+
 <?php } ?>
 
 

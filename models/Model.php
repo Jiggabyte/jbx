@@ -10,6 +10,28 @@ namespace Models;
 
 class Model{
 
+    public $host = '';
+
+    public $db = '';
+
+    public $user = '';
+
+    public $pass = '';
+
+    public $link = '';
+
+    public function connect(){
+
+    }
+
+    public function close(){
+
+    }
+
+    public function selectDB(){
+
+    }
+
 	public function select(){
 
 		$dane = 'Jigga';

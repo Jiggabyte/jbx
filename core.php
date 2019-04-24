@@ -19,6 +19,8 @@ class Bootstrap {
 
 		$_SESSION['jbx'] = 'Session_Key';
 
+        $_SESSION['rote'] = false;
+
 		require_once 'vendor/autoload.php';
 
 		require_once 'libraries/functions.php';
@@ -35,7 +37,7 @@ class Bootstrap {
 
 		require_once 'router/requests.php';
 
-		require_once 'router/route.php';
+		require_once 'router/BaseRoute.php';
 
 
 

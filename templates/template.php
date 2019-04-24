@@ -6,7 +6,6 @@
  * @author   Sixtus Onumajuru <jigga.e10@gmail.com>
  */
 
-require_once "db.php";
 
 if(!isset($_SESSION['jbx'])){
 
