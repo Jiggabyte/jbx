@@ -53,7 +53,7 @@ require_once 'route.php';
 
 
 //Routes Array For Filter.
-$routes = Router::list();
+$routes = Router::lister();
 
 //Routes Filter For Non Existent Routes
 $uri = $_SERVER['REQUEST_URI'];

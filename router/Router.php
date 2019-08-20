@@ -12,54 +12,49 @@ use Controllers\Controller;
 
 class Router{
 
-	public static $route_arr = [];
+    public static $route_arr = [];
 
 
-	public static function query($route, $task){
+    public static function query($route, $task){
 
-		$controller = new Controller();
+        $uri = $_SERVER['REQUEST_URI'];
+        $rodi = '`^'.$route.'\?jb=x`';
+
+        if($uri != $route ){
+            if(preg_match($rodi,$uri,$match)){
+
+            } else {
+                return false;
+            }
+
+        }
+
+        $controller = new Controller();
+
+        if(in_array($route,Router::$route_arr)){
+
+        } else {
+            array_push(Router::$route_arr,$route);
+        }
 
 
-		if(in_array($route,Router::$route_arr)){
+        if($uri === $route or preg_match($rodi,$uri,$match)){
 
-		} else {
-			array_push(Router::$route_arr,$route);
-		}
+            $_SESSION['rote'] = true;
+            call_user_func(array($controller, $task));
 
-		$uri = $_SERVER['REQUEST_URI'];
-        $ury = $_SERVER['REQUEST_URI'];
+        }
 
-		$roda = '`^/\w{1,}`';
 
-		if($route == '/' and preg_match($roda,$uri,$match)){
-			$route = '';
-
-		}
-
-		if(substr($ury, -1) == '/') {
-			$ury = substr($ury, 0, -1);
-			header('Location:'.$ury);
-		}
-
-		$rodi = '`^'.$route.'\?jb=x`';
-
-		if($uri === $route or preg_match($rodi,$uri,$match)){
-
-			$_SESSION['rote'] = true;
-			call_user_func(array($controller, $task));
-
-		}
-
-		return '';
-	}
+    }
 
 
 
-	public static function list(){
+    public static function lister(){
 
-		return Router::$route_arr;
+        return Router::$route_arr;
 
-	}
+    }
 
 
 }

@@ -13,9 +13,9 @@
 |The classes are autoloaded with regards to their namespaces.
 |
 */
-use App\Bootstrap;
+require_once ('core.php');
 
-require_once 'core.php';
+use App\Bootstrap;
 
 /*
 |--------------------------------------------------------------------------

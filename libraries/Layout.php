@@ -17,7 +17,7 @@ trait Layout {
 		{
 			global $parameter;
 			$parameter = $variable;
-			require_once 'templates/views/'.$view;
+			require_once "templates/views/$view";
 			require_once 'templates/template.php';
 
 		}
